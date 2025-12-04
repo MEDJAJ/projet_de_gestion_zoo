@@ -38,7 +38,18 @@ $result = mysqli_query($conn, $sql);
 
 <div class="flex h-screen">
 
- 
+  <aside class="w-64 bg-green-900 text-white flex flex-col shadow-lg">
+    <div class="text-center py-6 border-b border-green-800">
+      <h1 class="text-2xl font-bold tracking-wide">Zoo Educatif</h1>
+    </div>
+    <nav class="flex-1 px-4 py-6 space-y-3">
+      <a href="liste_animaux.php" class="block py-2 px-4 rounded hover:bg-green-700 bg-green-700 font-medium shadow">Liste animaux</a>
+      <a href="ajouter_animal.php" class="block py-2 px-4 rounded hover:bg-green-700 font-medium">Ajouter animal</a>
+      <a href="liste_habitats.php" class="block py-2 px-4 rounded hover:bg-green-700 font-medium">Liste habitats</a>
+      <a href="ajouter_habitat.php" class="block py-2 px-4 rounded hover:bg-green-700 font-medium">Ajouter habitat</a>
+      <a href="statistiques.php" class="block py-2 px-4 rounded hover:bg-green-700 font-medium">Statistiques</a>
+    </nav>
+  </aside>
 
   <main class="flex-1 p-8 overflow-auto">
     <h2 class="text-3xl font-bold mb-6 text-gray-800">Liste des Animaux</h2>

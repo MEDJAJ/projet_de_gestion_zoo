@@ -91,13 +91,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <option value="Omnivore" <?= $animal['Type_alimentaire']=="Omnivore" ? 'selected' : '' ?>>Omnivore</option>
             </select>
 
-            <label class="block mb-2 font-semibold">Habitat</label>
-            <select name="habitat" required class="w-full p-2 border rounded-lg mb-3">
-                <option value="1" <?= $animal['IdHab']==1 ? 'selected' : '' ?>>Savane</option>
-                <option value="2" <?= $animal['IdHab']==2 ? 'selected' : '' ?>>Jungle</option>
-                <option value="3" <?= $animal['IdHab']==3 ? 'selected' : '' ?>>Désert</option>
-                <option value="4" <?= $animal['IdHab']==4 ? 'selected' : '' ?>>Océan</option>
-            </select>
+          <label class="block mb-2 font-semibold">Habitat</label>
+<select name="habitat" required class="w-full p-2 border rounded-lg mb-3">
+    <option value=""> Sélectionner un habitat </option>
+
+    <?php
+    $sqlHab = "SELECT IdHab, NomHab FROM habitats";
+    $resHab = mysqli_query($conn, $sqlHab);
+
+    while ($hab = mysqli_fetch_assoc($resHab)) {
+        $selected = ($animal['IdHab'] == $hab['IdHab']) ? "selected" : "";
+        echo '<option value="'.$hab['IdHab'].'" '.$selected.'>'.$hab['NomHab'].'</option>';
+    }
+    ?>
+</select>
 
             <label class="block mb-2 font-semibold">Image</label>
             <input type="file" name="image" class="w-full p-2 border rounded-lg mb-3">
