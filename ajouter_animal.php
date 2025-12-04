@@ -31,6 +31,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
         $message = " Erreur SQL : " . mysqli_error($conn);
     }
 }
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
