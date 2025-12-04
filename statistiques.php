@@ -46,18 +46,7 @@ while ($row = mysqli_fetch_assoc($res3)) {
 <body class="bg-gray-100 font-sans">
 <div class="flex h-screen">
 
-  <aside class="w-64 bg-green-900 text-white shadow-lg">
-    <div class="text-center py-6 border-b border-green-800">
-      <h1 class="text-2xl font-bold">Zoo Educatif</h1>
-    </div>
-    <nav class="px-4 py-6 space-y-3">
-      <a href="liste_animaux.php" class="block py-2 px-4 hover:bg-green-700 rounded">Liste animaux</a>
-      <a href="ajouter_animal.php" class="block py-2 px-4 hover:bg-green-700 rounded">Ajouter animal</a>
-      <a href="liste_habitats.php" class="block py-2 px-4 hover:bg-green-700 rounded">Liste habitats</a>
-      <a href="ajouter_habitat.php" class="block py-2 px-4 hover:bg-green-700 rounded">Ajouter habitat</a>
-      <a href="statistiques.php" class="block py-2 px-4 bg-green-700 rounded shadow">Statistiques</a>
-    </nav>
-  </aside>
+ 
 
   <main class="flex-1 p-10 overflow-auto flex flex-col items-center">
 
