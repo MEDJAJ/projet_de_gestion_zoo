@@ -83,20 +83,24 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
 
                 <label class="block mb-1 font-semibold">Type alimentaire</label>
                 <select name="type" required class="w-full p-2 border rounded-lg mb-3">
-                    <option value="">-- Sélectionner --</option>
+                    <option value=""> Sélectionner </option>
                     <option value="Carnivore">Carnivore</option>
                     <option value="Herbivore">Herbivore</option>
                     <option value="Omnivore">Omnivore</option>
                 </select>
 
                 <label class="block mb-1 font-semibold">Habitat</label>
-                <select name="habitat" required class="w-full p-2 border rounded-lg mb-3">
-                    <option value="">-- Sélectionner --</option>
-                    <option value="10">Savane</option>
-                    <option value="2">Jungle</option>
-                    <option value="3">Désert</option>
-                    <option value="4">Océan</option>
-                </select>
+<select name="habitat" required class="w-full p-2 border rounded-lg mb-3">
+    <option value=""> Sélectionner </option>
+    <?php
+    $habitats = mysqli_query($conn, "SELECT IdHab, NomHab FROM habitats ORDER BY NomHab ASC");
+    while($rowHab = mysqli_fetch_assoc($habitats)) {
+        $selected = (isset($_POST['habitat']) && $_POST['habitat'] == $rowHab['IdHab']) ? "selected" : "";
+        echo '<option value="' . $rowHab['IdHab'] . '" ' . $selected . '>' . htmlspecialchars($rowHab['NomHab']) . '</option>';
+    }
+    ?>
+</select>
+
 
                 <label class="block mb-1 font-semibold">Image</label>
                 <input type="file" name="image"
