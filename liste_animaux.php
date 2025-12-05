@@ -134,32 +134,7 @@ $result = mysqli_query($conn, $sql);
 
 
 <script>
-  const modal = document.getElementById('animalModal');
-  const modalImage = document.getElementById('modalImage');
-  const modalNom = document.getElementById('modalNom');
-  const modalType = document.getElementById('modalType');
-  const modalHabitat = document.getElementById('modalHabitat');
-  const closeModal = document.getElementById('closeModal');
-
   
-  document.querySelectorAll('.animalCard').forEach(card => {
-    card.addEventListener('click', (e) => {
-      if(e.target==card){
-modalImage.src = card.dataset.image;
-      modalNom.textContent = card.dataset.nom;
-      modalType.textContent = card.dataset.type;
-      modalHabitat.textContent = card.dataset.habitat;
-      modal.classList.remove('hidden');
-      }
-      
-    });
-  });
-
- 
-  
-  closeModal.addEventListener('click', () => {
-    modal.classList.add('hidden');
-  });
 
 
   
