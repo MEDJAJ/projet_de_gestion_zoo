@@ -1,8 +1,6 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "zoo");
-if (!$conn) {
-    die("Erreur de connexion : " . mysqli_connect_error());
-}
+include "config.php";
+
 
 $type = isset($_GET['type']) ? mysqli_real_escape_string($conn, $_GET['type']) : "";
 $habitat = isset($_GET['habitat']) ? intval($_GET['habitat']) : 0;

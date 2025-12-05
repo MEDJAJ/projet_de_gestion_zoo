@@ -1,9 +1,7 @@
 <?php
 
-$conn = mysqli_connect("localhost", "root", "", "zoo");
-if (!$conn) {
-    die("Erreur de connexion : " . mysqli_connect_error());
-}
+include "config.php";
+
 
 
 if (!isset($_GET['id'])) {
@@ -73,11 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                    class="w-full border p-2 rounded">
         </div>
 
-        <div>
-            <label class="font-medium">Description :</label>
-            <textarea name="description" required class="w-full border p-2 rounded"
-                      rows="4"><?= htmlspecialchars($habitat['Description_Hab']) ?></textarea>
-        </div>
+       
 
        <label class="block mb-2 font-semibold">Image</label>
             <input type="file" name="image" class="w-full p-2 border rounded-lg mb-3">

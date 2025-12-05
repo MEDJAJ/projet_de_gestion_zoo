@@ -1,6 +1,6 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "zoo");
-if (!$conn) { die("Erreur : " . mysqli_connect_error()); }
+include "config.php";
+
 
 
 $sql1 = "

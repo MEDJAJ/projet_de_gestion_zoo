@@ -1,8 +1,6 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "zoo");
-if (!$conn) {
-    die("Erreur de connexion : " . mysqli_connect_error());
-}
+include "config.php";
+
 
 $sql = "SELECT * FROM habitats ORDER BY IdHab ASC";
 $result = mysqli_query($conn, $sql);
