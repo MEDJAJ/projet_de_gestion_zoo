@@ -84,7 +84,10 @@ $result = mysqli_query($conn, $sql);
   <main class="flex-1 p-4 lg:p-8">
     
    
-   
+    <div class="mb-6 lg:mb-8">
+      <h1 class="text-2xl lg:text-3xl font-bold text-gray-800 mb-2">Liste des Habitats</h1>
+      <p class="text-gray-600">Gérez et consultez tous les habitats du zoo</p>
+    </div>
 
    
     <div class="mb-6 lg:mb-8">
