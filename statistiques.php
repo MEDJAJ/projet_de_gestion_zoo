@@ -1,5 +1,5 @@
 <?php
-include "config.php";
+
 
 
 
@@ -11,7 +11,7 @@ $sql1 = "
 ";
 $res1 = mysqli_query($conn, $sql1);
 $labelsHab = []; $dataHab = [];
-while ($row = mysqli_fetch_assoc($res1)) {
+while ($row = mysqli_fetch_assoc($res1)){
     $labelsHab[] = $row['NomHab'];
     $dataHab[] = $row['total'];
 }
