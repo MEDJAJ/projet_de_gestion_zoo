@@ -156,7 +156,7 @@ $result = mysqli_query($conn, $sql);
                data-image="uploads/<?= htmlspecialchars($row['Image']) ?>">
 
             <div class="h-48 overflow-hidden">
-              <img src="uploads/<?= htmlspecialchars($row['Image']) ?>" 
+              <img src="uploads/<?= htmlspecialchars($row['Image']=="empty.webp" ? "empty.webp" : $row['Image']) ?>" 
                    class="w-full h-full object-cover">
             </div>
 

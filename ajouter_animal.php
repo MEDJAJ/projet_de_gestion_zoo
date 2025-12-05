@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $type = mysqli_real_escape_string($conn, $type);
         $habitat = mysqli_real_escape_string($conn, $habitat);
 
-        $imageName = "";
+        $imageName = "empty.webp";
         if (!empty($_FILES["image"]["name"])) {
             $imageName = time() . "_" . basename($_FILES["image"]["name"]);
             $uploadPath = "uploads/" . $imageName;
