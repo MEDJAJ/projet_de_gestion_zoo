@@ -45,7 +45,13 @@ $result = mysqli_query($conn, $sql);
       <p class="text-sm text-indigo-300 mt-1">Gestion des animaux</p>
     </div>
     
-    
+    <nav class="flex-1 p-4 space-y-2">
+      <a href="liste_animaux.php" class="block py-3 px-4 rounded-lg bg-indigo-700 font-medium hover:bg-indigo-600 transition">Liste animaux</a>
+      <a href="ajouter_animal.php" class="block py-3 px-4 rounded-lg hover:bg-indigo-600 transition">Ajouter animal</a>
+      <a href="liste_habitats.php" class="block py-3 px-4 rounded-lg hover:bg-indigo-600 transition">Liste habitats</a>
+      <a href="ajouter_habitat.php" class="block py-3 px-4 rounded-lg hover:bg-indigo-600 transition">Ajouter habitat</a>
+      <a href="statistiques.php" class="block py-3 px-4 rounded-lg hover:bg-indigo-600 transition">Statistiques</a>
+    </nav>
     
     <div class="p-4 border-t border-indigo-700 text-sm text-indigo-300">
       Connecté en tant qu'admin

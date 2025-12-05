@@ -47,32 +47,7 @@ while ($row = mysqli_fetch_assoc($res3)) {
 <div class="min-h-screen flex flex-col lg:flex-row">
 
 
-  <aside class="lg:w-64 bg-indigo-800 text-white hidden lg:flex flex-col">
-    <div class="p-6 border-b border-green-800">
-      <h1 class="text-2xl font-bold">Zoo Éducatif</h1>
-      <p class="text-sm text-green-300 mt-1">Gestion statistiques</p>
-    </div>
-    <nav class="flex-1 p-4 space-y-2">
-      <a href="liste_animaux.php" class="block py-3 px-4 rounded-lg hover:bg-indigo-700 transition">
-        Liste animaux
-      </a>
-      <a href="ajouter_animal.php" class="block py-3 px-4 rounded-lg hover:bg-indigo-700 transition">
-        Ajouter animal
-      </a>
-      <a href="liste_habitats.php" class="block py-3 px-4 rounded-lg hover:bg-indigo-700 transition">
-        Liste habitats
-      </a>
-      <a href="ajouter_habitat.php" class="block py-3 px-4 rounded-lg hover:bg-indigo-700 transition">
-        Ajouter habitat
-      </a>
-      <a href="statistiques.php" class="block py-3 px-4 rounded-lg bg-indigo-700 transition font-medium">
-        Statistiques
-      </a>
-    </nav>
-    <div class="p-4 border-t border-green-800 text-sm text-green-300">
-      Connecté en tant qu'admin
-    </div>
-  </aside>
+ 
 
 
   <header class="lg:hidden bg-indigo-800 text-white p-4">
