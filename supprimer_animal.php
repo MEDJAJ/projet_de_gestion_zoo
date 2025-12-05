@@ -12,5 +12,5 @@ if ($id > 0) {
 }
 
 
-
+header("Location: liste_animaux.php");
 exit;
