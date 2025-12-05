@@ -1,6 +1,5 @@
 <?php
-
-
+include "config.php";
 
 
 $sql1 = "
@@ -85,23 +84,7 @@ while ($row = mysqli_fetch_assoc($res3)) {
       </button>
     </div>
   
-    <nav id="mobileNav" class="hidden mt-4 space-y-2">
-      <a href="liste_animaux.php" class="block py-3 px-4 rounded-lg hover:bg-indigo-800 transition">
-        Liste animaux
-      </a>
-      <a href="ajouter_animal.php" class="block py-3 px-4 rounded-lg hover:bg-indigo-800  transition">
-        Ajouter animal
-      </a>
-      <a href="liste_habitats.php" class="block py-3 px-4 rounded-lg hover:bg-indigo-800  transition">
-        Liste habitats
-      </a>
-      <a href="ajouter_habitat.php" class="block py-3 px-4 rounded-lg hover:bg-indigo-800  transition">
-        Ajouter habitat
-      </a>
-      <a href="statistiques.php" class="block py-3 px-4 rounded-lg bg-indigo-700  font-medium">
-        Statistiques
-      </a>
-    </nav>
+    
   </header>
 
 
